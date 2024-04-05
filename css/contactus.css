@@ -1,0 +1,476 @@
+:root {
+    --color1: white;
+    --color2: #18191a;
+    --body: #43403F;
+    --navbuttext: #B6A89B;
+    --currentbutton: #18191a;
+    --header: #43403F;
+    --transition-speed: 0.5s;
+    --switch: #43403F;
+    --headerh1: #B6A89B;
+    --switchborder: #B6A89B;
+    --content: white;
+}
+
+.darkmode {
+    --color1: #313338;
+    --color2: white;
+    --body: #191919;
+    --navbuttext: white;
+    --currentbutton: white;
+    --header: #222222;
+    --button: #313338;
+    --headerh1: white;
+    --switchborder: white;
+    --content: #222222;
+
+}
+
+body {
+    margin: 0;
+}
+
+
+header h1 {
+    display: inline-block;
+    line-height: 16px;
+    letter-spacing: 5px; 
+    color: var(--headerh1);
+    font-family: 'Bokor', cursive;
+    font-size: 30px;
+    transition: color var(--transition-speed) ease-in-out;
+    font-weight: normal;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: var(--header);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: background-color var(--transition-speed) ease-in-out;
+
+}
+
+.parent {
+    margin-left: auto;
+}
+
+@font-face {
+    font-family: 'ggsans-medium';
+    src: url('ggsans-Medium.ttf');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ggsans-bolder';
+    src: url('ggsans-ExtraBold.ttf');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.header-navigation {
+    font-family: 'Righteous', cursive;
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    font-size: 16px;
+    height: 30px;
+    z-index: 3;
+    
+
+}
+
+.header-navigation ul {
+    display: flex;
+    margin: 0;
+    
+}
+
+/* .header-navigation ul li {
+    margin: 0 10px;
+    
+} */
+
+.header-navigation ul li a {
+    padding: 0 30px;
+    cursor: pointer;
+    height: 100%;
+    display: block;
+    font-family: 'ggsans-bolder', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--body);
+    transition: background-color var(--transition-speed) ease-in-out;
+    
+}
+
+.boton {
+    background-color: var(--content) !important;
+    border-radius: 15px 15px 0px 0px;
+    color: var(--currentbutton);
+    transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
+    padding: 7px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    
+    
+}
+.boton1 {
+    position: relative; /* Make the list item a positioning context */
+    transition: background-color var(--transition-speed) ease-in-out;
+    background-color: var(--content) !important;
+    border-radius: 0px;
+    width: 12px;
+    
+    
+}
+.boton-left::before {
+    content: ''; /* Add content for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px; /* Match the width of the parent */
+    height: 100%; /* Match the height of the parent */
+    transition: background-color var(--transition-speed) ease-in-out;
+    background-color: var(--body); /* Set the background color for the shape */
+    border-radius: 0 0 12px 0; /* Inherit the border-radius from the parent */
+    z-index: 1; /* Move the pseudo-element behind the content */
+}
+.boton-right::before {
+    content: ''; /* Add content for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px; /* Match the width of the parent */
+    height: 100%; /* Match the height of the parent */
+    transition: background-color var(--transition-speed) ease-in-out;
+    background-color: var(--body); /* Set the background color for the shape */
+    border-radius: 0 0 0 12px; /* Inherit the border-radius from the parent */
+    z-index: 1; /* Move the pseudo-element behind the content */
+}
+
+.spacer {
+    height: 15px;
+}
+.spacer-content {
+    height: 50px;
+}
+
+.navigation-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px 15px 0px 0px;
+    background: var(--navb);
+    color: var(--navbuttext);
+    margin: 0 10px;
+}
+
+.navigation-button:after {
+    content: "";
+    width: 85%;
+    height: 0%;
+    background: var(--content);
+    position: absolute;
+    transition: all 0.3s ease-out;
+    bottom: 0;
+}
+
+.navigation-button:hover::after {
+    width: 100%;
+    height: 25%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.navigation-button span {
+    text-align: center;
+    color: var(--navbuttext);
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation-button:hover span {
+    transform: scale(1.05) translateY(-3px);
+}
+
+.content {
+    background-color: var(--content);
+    font-family: 'ggsans-medium', sans-serif;
+    border-radius: 15px;
+    color: var(--color2);
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+}
+
+.kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    font-size: 3.8rem;
+    letter-spacing: 5px;
+}
+
+.kanit-bold2 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+  .kanit-light-logo {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  .kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+  }
+  .kanit-light2 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
+.kanit-light3 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+  .kanit-semibold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  .kanit-semibold2 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    
+  }
+
+h2{
+    font-size: 5rem;
+}
+.full-screen-image {
+    width: 100%;
+    height: 130vh; /* 100% of the viewport height */
+    background-image: url('../img/contacts/cover.webp');
+    background-size: cover;
+    background-position: center;
+}
+.full-screen-image2 {
+    width: 100%;
+    height: 130vh; /* 100% of the viewport height */
+    background-image: url('../img/products/products_front.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.custom-button {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--header);
+    color: var(--color1);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    transition: background-color var(--transition-speed) ease-in-out;
+    z-index: 8;
+    margin-top:100px;
+}
+
+footer h1 {
+    display: inline-block;
+    line-height: 60px;
+    color: var(--headerh1);
+    font-family: 'Roboto', sans-serif;
+    transition: color var(--transition-speed) ease-in-out;
+    z-index: 8;
+    font-size: 1rem;
+}
+
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 25px;
+    --light: white;
+    --yellow: #ffd801;
+    --dark: #18191a;
+    float: right;
+    margin-right: 25px;
+}
+
+.switch-label {
+    position: absolute;
+    width: 4.5rem;
+    height: 2.3rem;
+    background-color: var(--switch);
+    border-radius: 30px;
+    cursor: pointer;
+    border: 3px solid var(--switchborder);
+    transition: background-color var(--transition-speed) ease-in-out, border-color var(--transition-speed) ease-in-out;
+}
+
+.checkbox {
+    position: absolute;
+    
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    
+
+}
+
+.checkbox:checked~.slider {
+    background-color: var(--content);
+    transition: background-color var(--transition-speed) ease-in-out;
+    
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 0.35rem;
+    left: 0.4rem;
+    
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: var(--switchborder);
+    transition: background-color var(--transition-speed) ease-in-out;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.checkbox:checked~.slider::before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30x);
+    transform: translateX(34px);
+    -webkit-box-shadow: inset 7px -4px 0px 0px var(--yellow);
+    box-shadow: inset -9px -4px 0px 0px var(--yellow);
+    background-color: var(--content);
+
+}
+@media only screen and (max-width: 768px) {
+    h2{
+        font-size: 2rem;
+    }
+    .header-navigation ul li a {
+        padding: 0 1px;
+    }
+    
+    .header-navigation {
+        font-size: 12px;
+        justify-content: initial;
+    }
+    .btn{
+        font-size: 12px;
+        
+        
+    }
+    .kanit-bold{
+        font-size: 2.5rem;
+    }
+    .kanit-light {
+        font-size: 0.7rem;
+        letter-spacing: 0px;
+        
+      }
+      .kanit-light {
+        font-size: 0.9rem;
+        
+      }
+      .kanit-light2 {
+        font-size: 0.9rem;
+        
+      }
+    .kanit-semibold {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        line-height: 20px;
+      }
+      .custom-button {
+        font-size: 1rem;
+    }
+    .carousel {
+        width: 100%; /* Set the width of the carousel container */
+    }
+    .kanit-semibold2 {
+        font-size: 1rem;
+      }
+      .image-caption {
+        padding: 10px;
+        line-height: 10px;
+    }
+    .carousel-indicators {
+        bottom: 110px; /* Adjust the distance from the bottom as needed */
+    }
+    .full-screen-image {
+        height: 100vh; /* 100% of the viewport height */
+    }
+    .full-screen-image2 {
+        
+        height: 80vh; /* 100% of the viewport height */
+       
+    }
+    
+}
+

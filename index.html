@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/search.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <title>Purrfect Warrior ● Home</title>
+
+</head>
+<body>
+    <header class="header-container">
+        <h1 class="kanit-light-logo" style="margin-right:20px;">PURRFECT<br>WARRIOR</h1>
+        <a class="dropdown-toggle hidden-arrow btn btn-primary mx-2" href="#" id="navbarDropdownMenuLink" role="button"
+            data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false" data-bs-toggle="dropdown">
+            <img src="img/search.svg" class="search-icon">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" id="productDropdown">
+            <li>
+                <div class="input-group mt-2 mx-0">
+                    <div class="form-outline" data-mdb-input-init>
+                        <input type="text" id="form12" class="form-control" placeholder="(* Does not include functionality)">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <hr class="dropdown-divider" />
+            </li>
+        </ul>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="img/person.svg" class="search-icon" style="filter: invert(0) !important;">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item">Guest Account</a>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a>
+              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a>
+            </div>
+          </div>
+        <div class="toggle-switch parent" id="darkmodebutton">
+            
+            <label class="switch-label">
+                <input type="checkbox" class="checkbox" id="darkmodecheckbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    <nav class="header-navigation">
+
+        <ul>
+            <li class="boton1 boton-left" style="margin-left:-12px;"></li><!-- Added the div inside the list -->
+            <li id="home" class="boton"><button><span><a href="index.html">HOME</a></span></button></li>
+            <li class="boton1 boton-right" style="margin-right:24px;"></li><!-- Added the div inside the list -->
+
+            <li id="products" class=""><button class="navigation-button" style="margin-left: -15px;"><span><a
+                            href="products.html">PRODUCTS</a></span></button></li>
+            <li id="cart" class=""><button class="navigation-button"><span><a href="cart.html"
+                            id="cartLink">CART</a></span></button></li>
+            <li id="contactus" class=""><button class="navigation-button"><span><a
+                            href="contactus.html">CONTACTS</a></span></button></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="front-page">
+            <div class="darkened-image">
+                <img src="img/index/home1.webp" class="darkened-image">
+            </div>
+            <div class="text-overlay">
+                <h2 class="kanit-bold" style="letter-spacing:4px;">EQUIPMENT FOR<br>MODERN CAT<br>FIGHTERS</h2>
+                <div class="button-container">
+                    <a href="products.html" style="text-decoration: none; color: inherit;">
+                        <button class="custom-button3 kanit-semibold">SHOP NOW</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block" style="height: 80px;"></div>
+        <div class="d-md-none" style="height: 0px;"></div>
+        <div class="home-content">
+            <h1 class="kanit-semibold">EQUIP YOUR CAT FOR THE<br>ULTIMATE BATTLE WITH<br>PURRFECT WARRIOR</h1>
+            <div class="d-none d-md-block" style="height: 40px;"></div>
+        <div class="d-md-none" style="height: 0px;"></div>
+            <div class="home-text-container">
+                <p class="kanit-light">At Purrfect Warrior, we transcend being merely a retail outlet for<br>
+                    cat gear. Our team comprises dedicated cat aficionados and<br>
+                    military enthusiasts committed to assisting fellow cat owners<br>
+                    their feline companions in honing into adept and well-prepared<br>
+                    warriors.
+                </p>
+            </div>
+            <div class="d-none d-md-block" style="height: 40px;"></div>
+        <div class="d-md-none" style="height: 10px;"></div>
+            <div class="button-container">
+                <a href="products.html" style="text-decoration: none; color: inherit;">
+                    <button class="custom-button2 kanit-semibold">SHOP NOW</button>
+                </a>
+            </div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="img/index/cat1.webp" class="side-by-side-image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/index/cat2.png" class="side-by-side-image">
+                </div>
+            </div>
+            <br><br><br><br>
+            <p class="kanit-light" style="letter-spacing: 2px;">POPULAR</p>
+            <br>
+            <h1 class="kanit-semibold">BEST SELLING</h1>
+            <br><br><br><br>
+            <div class="container justify-content-center">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="5000">
+
+                    <div class="carousel-inner">
+                        <a href="productsView.html?index=2" style="text-decoration: none; color: inherit;">
+                            <div class="carousel-item active" style="cursor: pointer;"
+                                onmouseover="changeImage(this, 'img/index/grenadeharness_alt.png')"
+                                onmouseout="changeImage(this, 'img/index/grenadeharness.png')">
+                                <div class="image-wrapper">
+                                    <img src="img/index/grenadeharness.png" class="d-block w-100 " alt="...">
+                                    <div class="image-caption">
+                                        <h1 class="kanit-semibold2">Cat Equipment Harness</h1>
+                                        <p class="kanit-light" style="letter-spacing: 2px;">COOL BLACK</p>
+                                        <p class="kanit-light" style="letter-spacing: 2px;">₱1,069.00 PHP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="productsView.html?index=4" style="text-decoration: none; color: inherit;">
+                            <div class="carousel-item" style="cursor: pointer;"
+                                onmouseover="changeImage(this, 'img/index/catgoggles_alt.png')"
+                                onmouseout="changeImage(this, 'img/index/cateyegoggles.webp')">
+                                <div class="image-wrapper">
+                                    <img src="img/index/cateyegoggles.webp" class="d-block w-100" alt="...">
+                                    <div class="image-caption">
+                                        <h1 class="kanit-semibold2">Feline Protective Eyewear</h1>
+                                        <p class="kanit-light" style="letter-spacing: 2px;">CHARCOAL BLACK</p>
+                                        <p class="kanit-light" style="letter-spacing: 2px;">₱1,569.00 PHP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="productsView.html?index=0" style="text-decoration: none; color: inherit;">
+                            <div class="carousel-item" style="cursor: pointer;"
+                                onmouseover="changeImage(this, 'img/index/felinecombatglasses_alt.png')"
+                                onmouseout="changeImage(this, 'img/index/felinecombatglasses.png')">
+                                <div class="image-wrapper">
+                                    <img src="img/index/felinecombatglasses.png" class="d-block w-100" alt="...">
+                                    <div class="image-caption">
+                                        <h1 class="kanit-semibold2">Feline Mission Spectacles</h1>
+                                        <p class="kanit-light" style="letter-spacing: 2px;">LIGHT BLUE</p>
+                                        <p class="kanit-light" style="letter-spacing: 2px;">₱1,569.00 PHP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="signupModalContainer"></div>
+        <div id="loginModalContainer"></div>
+    </div>
+    <div class="spacer"></div>
+
+    <div class="extra-layer1"></div>
+    <div class="extra-layer2"></div>
+    <footer>
+        <h1>Copyright © 2023 By Purrfect Warrior Co.</h1>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/purrfectwarrior.js"></script>
+    <script src="js/productsSearch.js" type="module"></script>
+</body>
+
+</html>

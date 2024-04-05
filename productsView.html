@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/productsView.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/search.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <title>Purrfect Warrior ● Products</title>
+
+</head>
+
+<body>
+    <header class="header-container">
+        <h1 class="kanit-light-logo" style="margin-right:20px;">PURRFECT<br>WARRIOR</h1>
+        <a class="dropdown-toggle hidden-arrow btn btn-primary mx-2" href="#" id="navbarDropdownMenuLink" role="button"
+            data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false" data-bs-toggle="dropdown">
+            <img src="img/search.svg" class="search-icon">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" id="productDropdown">
+            <li>
+                <div class="input-group mt-2 mx-0">
+                    <div class="form-outline" data-mdb-input-init>
+                        <input type="text" id="form12" class="form-control" placeholder="(* Does not include functionality)">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <hr class="dropdown-divider" />
+            </li>
+        </ul>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="img/person.svg" class="search-icon" style="filter: invert(0) !important;">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item">Guest Account</a>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a>
+              <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a>
+            </div>
+          </div>
+        <div class="toggle-switch parent" id="darkmodebutton">
+            
+            <label class="switch-label">
+                <input type="checkbox" class="checkbox" id="darkmodecheckbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <div class="spacer"></div>
+
+    </div>
+    <nav class="header-navigation">
+        <ul>
+            <li id="home" class="" style="margin-left:-12px;margin-right:12px;"><button
+                    class="navigation-button"><span><a href="index.html">HOME</a></span></button>
+            </li>
+
+            <li class="boton1 boton-left" style="margin-left:-12px;"></li><!-- Added the div inside the list -->
+            <li id="products" class="boton"><button><span><a href="products.html">PRODUCTS</a></span></button></li>
+            <li class="boton1 boton-right"></li><!-- Added the div inside the list -->
+
+            <li id="cart" class=""><button class="navigation-button"><span><a href="cart.html"
+                            id="cartLink">CART</a></span></button>
+            </li>
+            <li id="contactus" class=""><button class="navigation-button"><span><a
+                            href="contactus.html">CONTACTS</a></span></button></li>
+        </ul>
+    </nav>
+
+    <div class="content" id="productContainer" style="border-radius: 15px 15px 0px 0px;">
+    </div>
+    <div class="content" style="border-radius: 0px 0px 15px 15px;">
+        <div class="spacer" style="height: 150px;"></div>
+        <div class="row mx-5">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col mx-2">
+                        <p class="kanit-light5">RELATED</p>
+                        <p class="kanit-bold2">PEOPLE ALSO BOUGHT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-end">
+                <a href="products.html" class=" d-flex" style="color: inherit; text-decoration: none;">
+                    <div class="button-text">
+                        <p class="me-2 mb-0 kanit-light5" style="font-size: smaller;">SHOP NOW <i class="bi bi-arrow-right ms-3"></i></p>
+                    
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-cols-2 row-cols-md-3 g-2 mt-5 mb-5" id="productRow">
+                <!-- Products will be added here -->
+            </div>
+        </div>
+    </div>
+
+
+    <div id="signupModalContainer"></div>
+    <div id="loginModalContainer"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                    <div class="green-circle">
+                        <i class="bi bi-check" style="font-size: 60px; color: white;"></i>
+                    </div>
+                    <p class="modal-text kanit-light2">Item has been added to your shopping cart</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="spacer"></div>
+
+    <div class="extra-layer1"></div>
+    <div class="extra-layer2"></div>
+    <footer>
+        <h1>Copyright © 2023 By The Field Kitchen Co.</h1>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/purrfectwarrior.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="js/productToCartHandler.js"></script>
+    <script src="js/productsSearch.js" type="module"></script>
+    <script type="module">
+        import products from './js/productsList.js';
+        import reviews from './js/reviews.js';
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const productContainer = document.getElementById('productContainer');
+            const selectedIndex = parseInt(getUrlParameter('index')) || 0;
+
+
+            const product = products[selectedIndex];
+            
+            let productHTML = `
+                <section class="py-5">
+    <div class="container-fluid px-4">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0" src="${product.image}" alt="..."
+                    style="width: 100%; height: auto;" />
+            </div>
+            <div class="col-md-6 px-md-5">
+                <div class="mx-lg-3">
+                    <h1 class="kanit-semibold2">${product.name}</h1>
+                    <div class="fs-5 mb-5">
+                        <p class="kanit-light">₱${parseFloat(product.price).toLocaleString('en-US', {
+                            minimumFractionDigits: 2, maximumFractionDigits: 2 })} PHP</p>
+                    </div>
+                    <p class="kanit-light2">${product.description}</p>
+                    <h1 class="kanit-semibold">SIZE</h1>
+                    <div class="box-container">
+                        ${product.sizes.map((size, index) => `
+                        <div class="box kanit-light3 d-flex justify-content-center align-items-center"
+                            onclick="toggleBox(${index + 1})">
+                            <span class="d-none d-md-inline">${size}</span>
+                            <span class="d-md-none">${size.slice(0, 1)}</span>
+                        </div>
+                        `).join('')}
+                    </div>
+                    <div class="d-flex">
+                        <button class="custom-button kanit-semibold"
+                            onclick="addToCart('${product.name}', '${product.price}', '${product.image}')">ADD TO
+                            CART
+                        </button>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="row mb-3 kanit-light2">
+                        <div class="col d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                class="bi bi-truck mini-icons" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                            </svg>
+                            <p class="m-0">Low Cost Shipping</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3 kanit-light2">
+                        <div class="col d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-shield-check mini-icons" viewBox="0 0 16 16">
+  <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+  <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+</svg>
+                            <p class="m-0">6 Months Warranty</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3 kanit-light2">
+                        <div class="col d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-box-seam mini-icons" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
+</svg>
+                            <p class="m-0">30 Days Return</p>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <button class="review-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="kanit-semibold4" style="margin-right: 10px;">REVIEWS (${Math.floor(Math.random() *
+                            (250 - 80 + 1)) + 80})</span></span>
+                        <span class="star-rating">
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-half"></span>
+                        </span>
+                        <i class="bi bi-chevron-down icon"></i>
+                        <i class="bi bi-chevron-up icon"></i>
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="spacer"></div>
+                        <div class="spacer"></div>
+                        <div class="star-rating">
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-fill"></span>
+                            <span class="star bi bi-star-half"></span>
+                            <span>
+                                <p class="kanit-semibold4" style="margin-left: 10px; letter-spacing: 0;">
+                                    ${parseFloat(product.rating).toLocaleString('en-US', {
+                                    minimumFractionDigits: 1, maximumFractionDigits: 1 })} Stars</p>
+                            </span>
+                        </div>
+                        <div class="kanit-semibold5">Write a review</div>
+                        <div id="allReviewsContainer">
+                            <!-- Reviews will be added here -->
+                        </div>
+                        <div class="kanit-semibold5">See more reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            `;
+
+            productContainer.innerHTML = productHTML; // Set the product HTML first
+
+            const allReviewsContainer = document.getElementById('allReviewsContainer');
+
+            const getRandomNumbers = () => {
+    const numbers = [];
+    while (numbers.length < 3) {
+        const randomNum = Math.floor(Math.random() * 10);
+        if (!numbers.includes(randomNum)) {
+            numbers.push(randomNum);
+        }
+    }
+    return numbers;
+};
+
+// Get 3 random reviews based on the generated numbers
+const randomReviewIndexes = getRandomNumbers();
+const selectedReviews = randomReviewIndexes.map(index => reviews[index]);
+
+
+            // Add reviews HTML to the allReviewsContainer
+            const reviewsHTML = selectedReviews.map(review => `
+<div class="review">
+    <h1 class="kanit-light6" style="font-weight:400;">${review.title}</h1>
+    <div class="user-rating">
+        <span class="star bi bi-star-fill2"></span>
+        <span class="star bi bi-star-fill2"></span>
+        <span class="star bi bi-star-fill2"></span>
+        <span class="star bi bi-star-fill2"></span>
+        <span class="star bi bi-star-fill2"></span>
+        <span>
+            <h1 class="kanit-light6" style="margin-left: 10px; opacity: 0.7;">${review.author} - ${review.date}</h1>
+        </span>
+    </div>
+    <p class="kanit-light6" style="font-size:medium">${review.comment}</p>
+    <div class="spacer"></div>
+</div>
+`).join('');
+
+            allReviewsContainer.innerHTML = reviewsHTML;
+        });
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        const productRow = document.getElementById('productRow');
+
+    document.addEventListener('DOMContentLoaded', function () {
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Create an array of indices from 0 to 8
+        const indices = Array.from({ length: 9 }, (_, index) => index);
+
+        // Shuffle the indices array
+        const shuffledIndices = shuffle(indices);
+
+        // Get the index of the current product
+        const currentProductIndex = parseInt(new URLSearchParams(window.location.search).get('index'));
+
+        // Filter out the current product index from the shuffled indices
+        const filteredIndices = shuffledIndices.filter(index => index !== currentProductIndex);
+
+        // Iterate over the first three shuffled indices (excluding the current product index)
+        for (let i = 0; i < Math.min(filteredIndices.length, 3); i++) {
+            const randomIndex = filteredIndices[i];
+            const product = products[randomIndex];
+        const column = `
+            <div class="col mb-3">
+                <a id="productLink" href="${product.productLink}" style="text-decoration: none;">
+                    <div class="card image-wrapper" style="cursor: pointer;"
+                        onmouseover="changeImage(this, '${product.imageAlt}')"
+                        onmouseout="changeImage(this, '${product.image}')">
+                        <div class="card-body p-0">
+                            <img src="${product.image}" class="card-img-top cropped-zoom-in" alt="...">
+                            <h1 class="kanit-semibold3">${product.name}</h1>
+                            <p class="kanit-light4">${product.color}<br>₱${parseFloat(product.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2})} PHP</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        `;
+        productRow.innerHTML += column;
+    }
+});
+    </script>
+
+</body>
+
+</html>

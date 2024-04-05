@@ -1,0 +1,29 @@
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px; 
+    filter: invert() !important;
+}
+
+.dropdown-toggle {
+    border-radius: 50%;
+    padding: 12px;
+    background-color: white;
+    border: none;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-toggle:hover,
+.dropdown-toggle:active,
+.dropdown-toggle:focus {
+    background-color: rgb(204, 204, 204) !important;
+}
+.search-name {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}

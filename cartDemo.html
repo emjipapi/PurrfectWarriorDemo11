@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+        <!-- Image -->
+        <div class="hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+            <img src="${item.imageUrl}" class="w-100" alt="${item.name}" />
+            <a href="#!">
+                <div class="mask"></div>
+            </a>
+        </div>
+        <!-- Image -->
+    </div>
+    <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+        <!-- Data -->
+        <p class="kanit-light">${item.name}</p>
+        <p class="kanit-light3">Size: ${item.size}</p>
+        <button class="btn btn-primary btn-sm"><i class="bi bi-trash"></i></button>
+        <!-- Data -->
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <!-- Quantity -->
+        <div class="row mb-4" style="max-width: 300px;">
+            <div class="col-auto">
+                <label for="form1" class="kanit-light4">QTY:</label>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <input id="form1" min="0" name="quantity" value="${item.quantity}" type="number" class="form-control" />
+                    <label class="form-label" for="form1"></label>
+                </div>
+            </div>
+        </div>
+        <!-- Quantity -->
+        <!-- Price -->
+        <p class="text-start text-md-center kanit-light3">
+            <strong>₱${(parseFloat(item.price) * item.quantity).toFixed(2)}</strong>
+        </p>
+        <!-- Price -->
+    </div>
+</div>
+<div class="border"></div>
