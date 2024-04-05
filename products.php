@@ -75,7 +75,7 @@
             </li>
 
             <li class="boton1 boton-left" style="margin-left:-12px;"></li><!-- Added the div inside the list -->
-            <li id="products" class="boton"><button><span><a href="products.html">PRODUCTS</a></span></button></li>
+            <li id="products" class="boton"><button><span><a href="products.php">PRODUCTS</a></span></button></li>
             <li class="boton1 boton-right"></li><!-- Added the div inside the list -->
 
             <li id="cart" class=""><button class="navigation-button"><span><a href="cart.html"
@@ -115,7 +115,8 @@
         <div class="container">
             <div class="row row-cols-2 row-cols-md-3 g-2 mt-5 mb-5" id="productRow">
                 <?php
-
+                
+                
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
@@ -124,7 +125,6 @@
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                   
                     while($row = $result->fetch_assoc()) {
                         echo '
                         <div class="col mb-3">
