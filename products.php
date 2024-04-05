@@ -115,18 +115,16 @@
         <div class="container">
             <div class="row row-cols-2 row-cols-md-3 g-2 mt-5 mb-5" id="productRow">
                 <?php
-                
-                // Check connection
+
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // SQL query to fetch products
                 $sql = "SELECT * FROM products";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Output data of each row
+                   
                     while($row = $result->fetch_assoc()) {
                         echo '
                         <div class="col mb-3">
